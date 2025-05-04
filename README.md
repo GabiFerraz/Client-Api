@@ -90,12 +90,12 @@ curl --location 'localhost:8080/api/client' \
 }'
 ```
 
-1. **Busca de Cliente:**
+2. **Busca de Cliente:**
 ```json
 curl --location 'localhost:8080/api/client/12345678000'
 ```
 
-1. **Atualização de Cliente:**
+3. **Atualização de Cliente:**
 ```json
 curl --location --request PUT 'localhost:8080/client/user/12345678000' \
 --header 'Content-Type: application/json' \
@@ -107,7 +107,7 @@ curl --location --request PUT 'localhost:8080/client/user/12345678000' \
 }'
 ```
 
-1. **Delete de Cliente:**
+4. **Delete de Cliente:**
 ```json
 curl --location --request DELETE 'localhost:8080/client/user/12345678000'
 ```
