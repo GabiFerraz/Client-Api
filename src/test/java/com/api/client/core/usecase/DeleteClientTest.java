@@ -24,6 +24,7 @@ class DeleteClientTest {
 
     deleteClient.execute(cpf);
 
+    verify(clientGateway).findByCpf(cpf);
     verify(clientGateway).deleteByCpf(cpf);
   }
 

@@ -124,6 +124,8 @@ class ClientGatewayImplTest {
     assertThat(response.getAddress()).isEqualTo(entityUpdated.getAddress());
     assertThat(response.getEmail()).isEqualTo(entityUpdated.getEmail());
 
+    verify(clientRepository).findByCpf(clientUpdate.getCpf());
+
     final var capturedEntity = entityCaptor.getValue();
     verify(clientRepository).save(capturedEntity);
 
@@ -133,9 +135,6 @@ class ClientGatewayImplTest {
     assertThat(capturedEntity.getPhoneNumber()).isEqualTo(entityUpdated.getPhoneNumber());
     assertThat(capturedEntity.getAddress()).isEqualTo(entityUpdated.getAddress());
     assertThat(capturedEntity.getEmail()).isEqualTo(entityUpdated.getEmail());
-
-    verify(clientRepository).findByCpf(clientUpdate.getCpf());
-    verify(clientRepository).save(capturedEntity);
   }
 
   @Test
