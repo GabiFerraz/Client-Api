@@ -6,7 +6,7 @@ unitários, **Lombok** para facilitar o desenvolvimento e documentação gerada 
 
 ## Descrição do Projeto
 O objetivo desse sistema é abranger desde a gestão de clientes e produtos até o processamento e entrega de pedidos, 
-enfatizando a autonomia dos serviços, comunicação eficas e persistência de dados isolada. Esta API é responsável pela 
+enfatizando a autonomia dos serviços, comunicação eficaz e persistência de dados isolada. Esta API é responsável pela 
 gestão de clientes.
 
 ## Funcionalidades
@@ -67,8 +67,8 @@ Para visualização dos dados da api no banco de dados H2, rodar o comando: **mv
 e acessar localmente o banco através do endpoint:
 - **Banco H2**: http://localhost:8080/h2-console
 - **Driver Class**: org.h2.Driver
-- **JDBC URL**: jdbc:h2:mem:ParkingMeter
-- **User Name**: gb
+- **JDBC URL**: jdbc:h2:mem:client
+- **User Name**: gm
 - **Password**:
 Para visualização dos dados da api no banco de dados Mysql, subir o docker-compose: **docker-compose up --build**
 
@@ -97,7 +97,7 @@ curl --location 'localhost:8080/api/client/12345678000'
 
 3. **Atualização de Cliente:**
 ```json
-curl --location --request PUT 'localhost:8080/client/user/12345678000' \
+curl --location --request PUT 'localhost:8080/client/12345678000' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "name": "Gabis",
@@ -109,7 +109,7 @@ curl --location --request PUT 'localhost:8080/client/user/12345678000' \
 
 4. **Delete de Cliente:**
 ```json
-curl --location --request DELETE 'localhost:8080/client/user/12345678000'
+curl --location --request DELETE 'localhost:8080/client/12345678000'
 ```
 
 
