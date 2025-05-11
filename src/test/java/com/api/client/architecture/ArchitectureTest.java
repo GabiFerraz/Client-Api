@@ -87,7 +87,7 @@ public class ArchitectureTest {
           .areAnnotatedWith(RestController.class)
           .should()
           .resideInAPackage("..entrypoint.controller..")
-          .as("Controllers should reside in a package 'com.api.lareserva.entrypoint.controller'.")
+          .as("Controllers should reside in a package 'com.api.client.entrypoint.controller'.")
           .allowEmptyShould(true);
 
   @ArchTest
@@ -121,7 +121,7 @@ public class ArchitectureTest {
                           final var responseClassIsNotFromPackagePresenter =
                               !responseClass
                                   .getPackageName()
-                                  .equals("com.api.lareserva.presenter.response");
+                                  .equals("com.api.client.presenter.response");
                           if (responseClassIsNotFromPackagePresenter) {
                             events.add(
                                 SimpleConditionEvent.violated(
