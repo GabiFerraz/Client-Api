@@ -22,6 +22,7 @@ class SearchClientTest {
 
     final var response = searchClient.execute(cpf);
 
+    assertThat(response).isPresent();
     assertThat(response.get()).usingRecursiveComparison().isEqualTo(client);
 
     verify(clientGateway).findByCpf(cpf);
