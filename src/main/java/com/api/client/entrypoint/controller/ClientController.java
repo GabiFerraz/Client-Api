@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/client")
+@RequestMapping("/api/clients")
 public class ClientController {
 
   private static final String CLIENT_NOT_FOUND_MESSAGE = "Client with CPF=[%s] not found";

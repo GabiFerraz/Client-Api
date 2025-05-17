@@ -79,7 +79,7 @@ Os endpoints estão documentados via **Swagger**:
 ### Possibilidades de Chamadas da API
 1. **Cadastro de Cliente:**
 ```json
-curl --location 'localhost:8080/api/client' \
+curl --location 'localhost:8080/api/clients' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "name": "Gabis",
@@ -92,12 +92,12 @@ curl --location 'localhost:8080/api/client' \
 
 2. **Busca de Cliente:**
 ```json
-curl --location 'localhost:8080/api/client/12345678000'
+curl --location 'localhost:8080/api/clients/12345678000'
 ```
 
 3. **Atualização de Cliente:**
 ```json
-curl --location --request PUT 'localhost:8080/client/12345678000' \
+curl --location --request PUT 'localhost:8080/clients/12345678000' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "name": "Gabis",
@@ -109,7 +109,7 @@ curl --location --request PUT 'localhost:8080/client/12345678000' \
 
 4. **Delete de Cliente:**
 ```json
-curl --location --request DELETE 'localhost:8080/client/12345678000'
+curl --location --request DELETE 'localhost:8080/clients/12345678000'
 ```
 
 
