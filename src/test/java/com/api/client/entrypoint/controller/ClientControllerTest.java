@@ -34,7 +34,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @ActiveProfiles("test")
 class ClientControllerTest {
 
-  private static final String BASE_URL = "/api/client";
+  private static final String BASE_URL = "/api/clients";
   private static final String BASE_URL_WITH_CPF = BASE_URL + "/%s";
 
   @Autowired private MockMvc mockMvc;
